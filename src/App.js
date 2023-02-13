@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import stevie from '../public/stevie.jpeg';
+import stevie from './stevie.jpeg';
 import './App.css';
 
 function App() {
