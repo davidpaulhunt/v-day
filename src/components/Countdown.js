@@ -4,7 +4,7 @@ import { WiredDivider } from "wired-elements-react/lib/WiredDivider";
 function Countdown() {
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
-    const difference = +new Date(`${year}-02-24`) - +new Date();
+    const difference = +new Date(`2/24/2023`) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -44,7 +44,7 @@ function Countdown() {
 
   return (
     <div style={{ backgroundColor: "white" }} className="fixed-top">
-      <h1>Kissing again in {timerComponents.length ? timerComponents : <span>We're together!</span>}</h1>
+      <h1>Kissing you again in {timerComponents.length ? timerComponents : <span>We're together!</span>}</h1>
       <WiredDivider />
     </div>
   );
