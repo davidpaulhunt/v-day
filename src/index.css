@@ -1,13 +1,34 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {
+  padding: 16px;
+  text-align: center;
+}
+
+wired-card {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: block;
+}
+
+section {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+wired-button {
+  background: yellow;
+  color: red;
+  margin: 8px;
+}
+wired-input {
+  width: 200px;
+  font-family: inherit;
 }

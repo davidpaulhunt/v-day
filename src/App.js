@@ -1,29 +1,51 @@
-import logo from './logo.svg';
-import stevie from './stevie.jpeg';
-import './App.css';
+import React from "react";
+import { WiredDivider } from "wired-elements-react/lib/WiredDivider";
+import { WiredImage } from "wired-elements-react/lib/WiredImage";
+import {
+  Container,
+  Row
+} from "reactstrap";
+import Countdown from "components/Countdown";
+import us1 from "images/us1.JPG"
+
+import "./App.css";
+
+const imgsrc = "https://picsum.photos/seed/picsum/500/300";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <div>
-        <img src={stevie} />
-      </div>
-    </div>
-  );
+  return (<>
+    <Countdown />
+    <Container fluid style={{ paddingTop: "100px" }}>
+      <Row>
+        <h1>
+          👋
+          Hi Stevie
+          Welcome to <span style={{ color: "red" }}>Valentine's Day</span> 2023
+        </h1>
+      </Row>
+      <br />
+      <Row>
+        <h1>
+          Here is a cute picture of us
+        </h1>
+      </Row>
+      <Row>
+        <WiredImage src={us1} elevation={2} />
+        <h3>
+          ( don't we look happy? )
+        </h3>
+      </Row>
+    </Container>
+    <br />
+    <Container>
+    <Row>
+        <h1>
+          Here is a cute picture of us
+        </h1>
+      </Row>
+    </Container>
+    </>
+  )
 }
 
 export default App;
