@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { WiredDivider } from "wired-elements-react/lib/WiredDivider";
 
+const targetDate = new Date("July 7, 2023 00:00:00").getTime();
+
 function Countdown() {
   const calculateTimeLeft = () => {
-    let year = new Date().getFullYear();
-    const difference = +new Date(`2/24/2023`) - +new Date();
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
     let timeLeft = {};
 
-    if (difference > 0) {
+    if (distance > 0) {
       timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
+        days, hours, minutes, seconds
       };
     }
 
@@ -36,7 +40,7 @@ function Countdown() {
     }
 
     timerComponents.push(
-      <small>
+      <small key={interval}>
         {timeLeft[interval]} {interval}{" "}
       </small>
     );
