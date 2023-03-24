@@ -48,7 +48,7 @@ function Countdown() {
 
   return (
     <div style={{ backgroundColor: "white" }} className="fixed-top">
-      <h1>Kissing you again in {timerComponents.length ? timerComponents : <span>We're together!</span>}</h1>
+      <h1>{timerComponents.length ? timerComponents : <span>We're together!</span>} until Wireless!</h1>
       <WiredDivider />
     </div>
   );

@@ -16,6 +16,8 @@ import text1 from "images/text1.PNG"
 import text2 from "images/text2.PNG"
 import dogChocolate from "images/dog-and-chocolate.jpeg"
 import us3 from "images/us3.JPG"
+import bham1 from "images/bham1.JPG"
+import bham2 from "images/bham2.jpg"
 
 import "./App.css";
 
@@ -41,6 +43,28 @@ function App() {
   return (<>
     <Countdown />
     <Container fluid style={{ paddingTop: "100px", paddingBottom: "20px" }}>
+      <Row>
+        <h1>
+          😘 Hey baby
+          We did it!
+          Another trip, another beautiful set of memories together
+          Here are some reminders
+        </h1>
+      </Row>
+      <Row>
+        <WiredImage src={bham1} elevation={2} />
+        <h1>Twinsies! ⚽️</h1>
+        <WiredImage src={bham2} elevation={2} />
+        <h1>👔👗 Our fancy dinner date 🍽</h1>
+      </Row>
+      <Row>
+        <h1>
+          I had such an amazing time with you ❤️
+          <br />
+          And can't wait until Wireless 🎵
+        </h1>
+      </Row>
+      <br /><br /><br />
       <Row>
         <h1>
           👋
