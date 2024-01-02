@@ -33,7 +33,7 @@ const shuffle = (array) => {
   return array; 
 }; 
 
-const images = [
+const images = shuffle([
   castle,
   castle2,
   escape,
@@ -60,7 +60,29 @@ const images = [
   text2,
   dessert,
   david2,
-];
+]);
+
+const songs = shuffle([
+  "https://open.spotify.com/embed/track/0tgVpDi06FyKpA1z0VMD4v?utm_source=generator",
+  "https://open.spotify.com/embed/track/0cVyQfDyRnMJ0V3rjjdlU3?utm_source=generator",
+  "https://open.spotify.com/embed/track/2LBqCSwhJGcFQeTHMVGwy3?utm_source=generator",
+  "https://open.spotify.com/embed/track/6Qyc6fS4DsZjB2mRW9DsQs?si=b9d3c02e6ff24b24",
+]);
+
+const Song = ({ src }) => (
+  <iframe
+    src={src}
+    width="100%"
+    height="353"
+    allowFullScreen
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+    className="object-none object-center"
+    style={{
+      maxWidth: "500px"
+    }}
+  />
+);
 
 export default function Gallery() {
   return (
@@ -70,10 +92,29 @@ export default function Gallery() {
       </p>
       <div className="columns-3xs gap-8 space-y-8">
         {
-          shuffle(images).map((image, i) => (
+          images.slice(0, 3).map((image, i) => (
             <img key={i} src={image} className="w-full object-cover rounded-lg" />
           ))
         }
+        <Song src={songs[0]} />
+        {
+          images.slice(3, 13).map((image, i) => (
+            <img key={i} src={image} className="w-full object-cover rounded-lg" />
+          ))
+        }
+        <Song src={songs[1]} />
+        {
+          images.slice(13, 19).map((image, i) => (
+            <img key={i} src={image} className="w-full object-cover rounded-lg" />
+          ))
+        }
+        <Song src={songs[2]} />
+        {
+          images.slice(19).map((image, i) => (
+            <img key={i} src={image} className="w-full object-cover rounded-lg" />
+          ))
+        }
+        <Song src={songs[3]} />
       </div>
     </div>
   )
