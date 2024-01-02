@@ -16,6 +16,6 @@ body {
 }
 
 .happy-anniversary {
-  @apply text-6xl;
+  @apply text-5xl md:text-6xl;
   font-family: 'Rubik Doodle Shadow';
 }
