@@ -1,35 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
+  @apply bg-slate-50 py-4 bg-yellow-50;
   margin: 0;
-  font-family: 'Gloria Hallelujah', cursive;
+  /* font-family: 'Gloria Hallelujah', cursive; */
+  /* font-family: 'Roboto', sans-serif;
+   */
+  font-family: 'Inter', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
   font-size: 16px;
   line-height: 1.8;
   text-align: center;
 }
 
-main {
-  padding: 16px;
-  text-align: center;
-}
-
-wired-card {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  display: block;
-}
-
-section {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 60px 0;
-}
-
-wired-button {
-  background: yellow;
-  color: red;
-  margin: 8px;
-}
-wired-input {
-  width: 200px;
-  font-family: inherit;
+.happy-anniversary {
+  @apply text-6xl;
+  font-family: 'Rubik Doodle Shadow';
 }
